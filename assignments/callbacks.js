@@ -27,33 +27,33 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 ///////////////////////////////////////////
-function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
-  return cb(arr.length);
-}
-getLength(items, (listLength) => {
-  // console.log(listLength);
-});
+// function getLength(arr, cb) {
+//   // getLength passes the length of the array into the callback.
+//   return cb(arr.length);
+// }
+// getLength(items, (listLength) => {
+//   // console.log(listLength);
+// });
 
 
 ////////////////////////////////////////////
-function last(arr, cb) {
-  // last passes the last item of the array into the callback.
-  return cb(arr.length - 1);
-}
-last(items, (lastItem) => {
-  // console.log(items[lastItem]);
-});
+// function last(arr, cb) {
+//   // last passes the last item of the array into the callback.
+//   return cb(arr.length - 1);
+// }
+// last(items, (lastItem) => {
+//   // console.log(items[lastItem]);
+// });
 
 
 //////////////////////////////////////////////
-function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return cb(x + y);
-}
-sumNums(2, 10, (sum) => {
-  // console.log(sum);
-});
+// function sumNums(x, y, cb) {
+//   // sumNums adds two numbers (x, y) and passes the result to the callback.
+//   return cb(x + y);
+// }
+// sumNums(2, 10, (sum) => {
+//   // console.log(sum);
+// });
 
 
 /////////////////////////////////////////////////////
@@ -62,16 +62,25 @@ function multiplyNums(x, y, cb) {
   return cb(x * y);
 }
 multiplyNums(10402, 239849484, (product) => {
-  // console.log(`${product} ${'is a big number'}` );
+  console.log(`${product} ${'is a big number'}` );
 });
 
+// const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 ////////////////////////////////////////////////////
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  return cb();
+  return cb(item, list);
 }
+contains('Pencil', items, function(list) {
+  for(let i = 0; i < list.length; i++){
+    if(list[i] === item){
+      return true;
+    }
+    return false;
+  }
+});
 
 /* STRETCH PROBLEM */
 
