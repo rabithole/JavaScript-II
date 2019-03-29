@@ -53,22 +53,42 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 {"id":49,"first_name":"Bel","last_name":"Alway","email":"balway1c@ow.ly","shirt_size":"S","company_name":"Voolia","donation":107},
 {"id":50,"first_name":"Shell","last_name":"Baine","email":"sbaine1d@intel.com","shirt_size":"M","company_name":"Gabtype","donation":171}];
 
+
+console.log(runners[0]);
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
 
-runners.forEach(value => console.log(value.first_name));
+runners.forEach(value => fullName.push(`${value.first_name} ${value.last_name}`));
 
-console.log(fullName);
+// runners.forEach(function(value) {
+// 	fullName.push(`${value.first_name} ${value.last_name}`);
+// })
+
+// console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
-console.log(allCaps); 
+
+// runners.map(function(value) {
+// 	allCaps.push(value.first_name.toUpperCase());
+// })
+
+runners.map(value => allCaps.push(value.first_name.toUpperCase()))
+
+// console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
+
+largeShirts.push(runners.filter(first_name => first_name.shirt_size === 'L'));
+
+runners.filter(function(first_name){
+	largeShirts.push(first_name.shirt_size === 'L');
+})
+
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
