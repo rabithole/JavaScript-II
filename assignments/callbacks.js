@@ -71,7 +71,7 @@ multiplyNums(10402, 239849484, (product) => {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  return cb(item, list);
+  return cb();
 }
 contains('Pencil', items, function(list) {
   for(let i = 0; i < list.length; i++){
