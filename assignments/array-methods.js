@@ -124,22 +124,28 @@ ticketPriceTotal.push(totalDonations.reduce(function(acc, curr){
 
 // Problem 1
 // 	Identifying the racers name with their race number. 
-// let firstId = runners.forEach(function(first){
-// 	console.log(`${first.first_name} ${first.id}`);
-// })
+let firstId = [];
+runners.forEach(
+		function(first){
+			firstId.push((`${first.first_name} ${first.id}`));
+		})
+// console.log(firstId);
+
 
 // Problem 2
-// 	Create an array out of problem 1 solution. 
-// const runnerIdentity = runners.map(function(first) {
-// 	runners.forEach(function(first){
-// 		`${first.first_name} ${first.id}`;
-// 	})
-// });
+// 	 Largest donation prize!
 
-// console.log(runnerIdentity);
+let largest = 0;
 
-let runnersIdentity = runners.map(runners.forEach(function(first){
-	console.log(`${first.first_name} ${first.id}`);
-}))
+const largestDonation = runners.filter(lgDonation)
+console.log(largest);
+
+function lgDonation(donation){
+	if(donation.donation > largest) {
+		largest = donation.donation;
+	}
+}
+
 
 // Problem 3
+// 	
