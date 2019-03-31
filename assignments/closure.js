@@ -1,7 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function kindOfCar(year, make, model){
+	let yourCar = 'You drive a ';
 
+	function makeCar() {
+		return `${yourCar} ${year}, ${make} ${model}`
+	} 
+	return makeCar();
+};
 
+console.log(kindOfCar(2011, 'Lexus', 'IS350'));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
@@ -20,14 +28,3 @@ const counterFactory = () => {
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
-
-function showName (firstName, lastName) { 
-	var nameIntro = "Your name is ";
-    // this inner function has access to the outer function's variables, including the parameter
-	function makeFullName () {         
-		return nameIntro + firstName + " " + lastName;     
-	}
-	return makeFullName (); 
-} 
-
-showName ("Michael", "Jackson"); // Your name is Michael Jackson 
