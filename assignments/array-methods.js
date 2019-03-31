@@ -148,4 +148,9 @@ function lgDonation(donation){
 
 
 // Problem 3
-// 	
+// 	Sort alphabetically for the start order. 
+let company = runners.map(function(array) {
+	return array.company_name;
+});
+
+console.log(company.sort());

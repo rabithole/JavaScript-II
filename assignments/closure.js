@@ -2,6 +2,7 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
@@ -19,3 +20,14 @@ const counterFactory = () => {
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
+
+function showName (firstName, lastName) { 
+	var nameIntro = "Your name is ";
+    // this inner function has access to the outer function's variables, including the parameter
+	function makeFullName () {         
+		return nameIntro + firstName + " " + lastName;     
+	}
+	return makeFullName (); 
+} 
+
+showName ("Michael", "Jackson"); // Your name is Michael Jackson 
