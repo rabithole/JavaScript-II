@@ -1,6 +1,6 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum', 'what'];
 
  
 
@@ -37,23 +37,23 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 ////////////////////////////////////////////
-// function last(arr, cb) {
-//   // last passes the last item of the array into the callback.
-//   return cb(arr.length - 1);
-// }
-// last(items, (lastItem) => {
-//   console.log(items[lastItem]);
-// });
+function last(arr, cb) {
+  // last passes the last item of the array into the callback.
+  return cb(arr.length - 1);
+}
+last(items, (lastItem) => {
+  console.log(items[lastItem]);
+});
 
 
 //////////////////////////////////////////////
-// function sumNums(x, y, cb) {
-//   // sumNums adds two numbers (x, y) and passes the result to the callback.
-//   return cb(x + y);
-// }
-// sumNums(2, 10, (sum) => {
-//   // console.log(sum);
-// });
+function sumNums(x, y, cb) {
+  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y);
+}
+sumNums(2, 10, (sum) => {
+  // console.log(sum);
+});
 
 // const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
